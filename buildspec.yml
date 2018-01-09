@@ -9,8 +9,7 @@ phases:
       - pip --version && pip install aws-shell && aws --version
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR...
-      - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
+      - echo Pre_build start 
   build:
     commands:
       - echo Build started on `date`
