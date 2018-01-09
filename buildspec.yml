@@ -3,6 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
+      - apt-get update -y
+      - apt-get install -y curl python
+      - curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py
       - pip --version && pip install aws-shell && aws --version
   pre_build:
     commands:
